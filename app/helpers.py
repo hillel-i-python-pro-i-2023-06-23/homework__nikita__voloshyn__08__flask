@@ -2,6 +2,7 @@ from faker import Faker
 
 fake = Faker()
 
+
 def generate_user_data(num_users=100):
     users = []
     for _ in range(num_users):

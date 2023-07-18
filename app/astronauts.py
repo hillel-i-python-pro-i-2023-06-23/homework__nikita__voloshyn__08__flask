@@ -1,5 +1,6 @@
 import requests
 
+
 def get_number_of_astronauts():
     url = "http://api.open-notify.org/astros.json"
     response = requests.get(url)
