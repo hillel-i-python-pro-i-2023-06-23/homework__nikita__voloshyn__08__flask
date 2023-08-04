@@ -1,3 +1,5 @@
+# Contains a set of instructions used to build a Docker image.
+
 FROM python:3.11
 
 ENV PYTHONUNBUFFERED=1
@@ -22,4 +24,4 @@ COPY --chown=${USER} ./app app
 
 USER ${USER}
 
-ENTRYPOINT ["python", "run.py"]
+ENTRYPOINT ["flask", "run"]

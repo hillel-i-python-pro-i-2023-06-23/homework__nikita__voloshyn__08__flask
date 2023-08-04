@@ -1,10 +1,14 @@
 from flask import Flask
+from app.routes import home, get_content, generate_users, get_astronauts, calculate_average
 
 app = Flask(__name__)
 
-# Загружаем конфигурацию
+# Загрузка конфигурации
 app.config.from_pyfile("config.py")
 
-# Запускаем приложение
-if __name__ == "__main__":
-    app.run(port=5050)
+# Регистрация роутов
+app.add_url_rule("/", view_func=home)
+app.add_url_rule("/get-content/", view_func=get_content)
+app.add_url_rule("/generate-users/", view_func=generate_users)
+app.add_url_rule("/get-astronauts/", view_func=get_astronauts)
+app.add_url_rule("/calculate-average/", view_func=calculate_average)
