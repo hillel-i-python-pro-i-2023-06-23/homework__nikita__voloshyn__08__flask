@@ -33,4 +33,4 @@ def calculate_average():
     return f"Average height: {average_height_cm} cm<br>Average weight: {average_weight_kg} kg"
 
 if __name__ == "__main__":
-    app.run(port=5050, debug=True)
+    app.run()

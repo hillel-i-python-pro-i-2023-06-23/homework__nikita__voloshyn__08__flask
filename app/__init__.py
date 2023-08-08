@@ -1,5 +1,5 @@
 from flask import Flask
-from app.routes import home, get_content, generate_users, get_astronauts, calculate_average
+from run import home, get_content, generate_users, get_astronauts, calculate_average
 
 app = Flask(__name__)
 
